@@ -52,5 +52,8 @@
     <Reference Include="ModGeneric">
       <HintPath>C:\Users\chloe\AppData\Local\osu-benchmark\ModGeneric.dll</HintPath>
     </Reference>
+    <Reference Include="ModProjectMetrics">
+      <HintPath>C:\Users\chloe\AppData\Local\osu-benchmark\ModProjectMetrics.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
