@@ -26,7 +26,8 @@ namespace osu.Game.ModChloe
                     Path.Combine(path,"osu.Game.Rulesets.Taiko.dll"),
                     Path.Combine(path,"osu.Game.Tournament.dll"),
                 },
-                targetedNamespaces
+                targetedNamespaces,
+                new Type[] { }
             );
             ModProjectMetrics.ComputeAndLogProjectMetrics();
 
@@ -36,7 +37,9 @@ namespace osu.Game.ModChloe
                 targetedNamespaces,
                 executionEnvironment,
                 new Type[] { },
-                new List<(string, string)> { }
+                new List<(string, string)> { },
+                new Type[] { },
+                @"C:\Users\chloe\Documents\Chloe\Master-Thesis\Benchmarks\osu-benchmark\osu.Game.Rulesets.Mania.Tests\bin\Debug\net6.0\osu.Game.Rulesets.Mania.Tests.dll"
             );
             ModLogExecutionData.Patch();
         }
