@@ -12,7 +12,7 @@ namespace osu.Game.Tests
         [OneTimeSetUp]
         public void RunBeforeAnyTests()
         {
-            ModLoader.Load("Tests");
+            ModLoader.Load("Test");
         }
     }
 }
