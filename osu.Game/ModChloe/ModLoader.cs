@@ -13,8 +13,11 @@ namespace osu.Game.ModChloe
     {
         public static void Load(string executionEnvironment)
         {
-            string path = @"C:\Users\chloe\Documents\Chloe\Master-Thesis\Benchmarks\osu-benchmark\osu.Desktop\bin\Debug\net6.0";
-            string[] targetedNamespaces = new string[] { "osu.Game.Rulesets.Mania.Replays" };
+            string path = @"C:\Users\chloe\Documents\Benchmarks\osu-benchmark\osu.Desktop\bin\Debug\net6.0";
+            string[] targetedNamespaces = new string[] {
+                "osu.Game.Rulesets.Mods",
+            };
+            // osu.Game.Rulesets.Osu.Mods also?
 
             ModProjectMetrics.SetModParameters(
                 "Osu",
@@ -33,13 +36,13 @@ namespace osu.Game.ModChloe
 
             ModLogExecutionData.SetModParameters(
                 "Osu",
-                Path.Combine(path, "osu.Game.Rulesets.Mania.dll"),
+                Path.Combine(path, "osu.Game.dll"),
                 targetedNamespaces,
                 executionEnvironment,
                 new Type[] { },
                 new List<(string, string)> { },
                 new Type[] { },
-                @"C:\Users\chloe\Documents\Chloe\Master-Thesis\Benchmarks\osu-benchmark\osu.Game.Rulesets.Mania.Tests\bin\Debug\net6.0\osu.Game.Rulesets.Mania.Tests.dll"
+                @"C:\Users\chloe\Documents\Benchmarks\osu-benchmark\osu.Game.Tests\bin\Debug\net6.0\osu.Game.Tests.dll"
             );
             ModLogExecutionData.Patch();
         }
