@@ -19,20 +19,20 @@ namespace osu.Game.ModChloe
             };
             // osu.Game.Rulesets.Osu.Mods also?
 
-            ModProjectMetrics.SetModParameters(
-                "Osu",
-                new string[] {
-                    Path.Combine(path,"osu.Game.dll"),
-                    Path.Combine(path,"osu.Game.Rulesets.Catch.dll"),
-                    Path.Combine(path,"osu.Game.Rulesets.Mania.dll"),
-                    Path.Combine(path,"osu.Game.Rulesets.Osu.dll"),
-                    Path.Combine(path,"osu.Game.Rulesets.Taiko.dll"),
-                    Path.Combine(path,"osu.Game.Tournament.dll"),
-                },
-                targetedNamespaces,
-                new Type[] { }
-            );
-            ModProjectMetrics.ComputeAndLogProjectMetrics();
+            //ModProjectMetrics.SetModParameters(
+            //    "Osu",
+            //    new string[] {
+            //        Path.Combine(path,"osu.Game.dll"),
+            //        Path.Combine(path,"osu.Game.Rulesets.Catch.dll"),
+            //        Path.Combine(path,"osu.Game.Rulesets.Mania.dll"),
+            //        Path.Combine(path,"osu.Game.Rulesets.Osu.dll"),
+            //        Path.Combine(path,"osu.Game.Rulesets.Taiko.dll"),
+            //        Path.Combine(path,"osu.Game.Tournament.dll"),
+            //    },
+            //    targetedNamespaces,
+            //    new Type[] { }
+            //);
+            //ModProjectMetrics.ComputeAndLogProjectMetrics();
 
             ModLogExecutionData.SetModParameters(
                 "Osu",
