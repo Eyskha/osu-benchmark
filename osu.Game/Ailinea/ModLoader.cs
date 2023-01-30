@@ -1,13 +1,11 @@
 ﻿// Copyright (c) ppy Pty Ltd <contact@ppy.sh>. Licensed under the MIT Licence.
 // See the LICENCE file in the repository root for full licence text.
 
-using Chloe.Mod;
-using Chloe.ProjectMetrics;
-using System;
-using System.Collections.Generic;
 using System.IO;
+using Ailinea;
+using Ailinea.Inputs;
 
-namespace osu.Game.ModChloe
+namespace osu.Game.Ailinea
 {
     public class ModLoader
     {
@@ -18,6 +16,23 @@ namespace osu.Game.ModChloe
                 "osu.Game.Rulesets.Mods",
             };
             // osu.Game.Rulesets.Osu.Mods also?
+
+            AilineaMod.CreateMod(
+                new ProjectInformation()
+                {
+                    ProjectName = "Osu",
+                    ExecutionEnvironment = executionEnvironment
+                },
+                new Targets()
+                {
+                    PathAssemblyToInspect = Path.Combine(path, "osu.Game.dll"),
+                    NamespacesToInspect = targetedNamespaces,
+                },
+                new TestTargets()
+                {
+                    PathTestAssembly = @"C:\Users\chloe\Documents\Benchmarks\osu-benchmark\osu.Game.Tests\bin\Debug\net6.0\osu.Game.Tests.dll"
+                }
+            );
 
             //ModProjectMetrics.SetModParameters(
             //    "Osu",
@@ -33,18 +48,6 @@ namespace osu.Game.ModChloe
             //    new Type[] { }
             //);
             //ModProjectMetrics.ComputeAndLogProjectMetrics();
-
-            ModLogExecutionData.SetModParameters(
-                "Osu",
-                Path.Combine(path, "osu.Game.dll"),
-                targetedNamespaces,
-                executionEnvironment,
-                new Type[] { },
-                new List<(string, string)> { },
-                new Type[] { },
-                @"C:\Users\chloe\Documents\Benchmarks\osu-benchmark\osu.Game.Tests\bin\Debug\net6.0\osu.Game.Tests.dll"
-            );
-            ModLogExecutionData.Patch();
         }
     }
 }

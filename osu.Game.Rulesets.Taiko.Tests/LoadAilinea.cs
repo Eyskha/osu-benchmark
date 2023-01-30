@@ -2,12 +2,12 @@
 // See the LICENCE file in the repository root for full licence text.
 
 using NUnit.Framework;
-using osu.Game.ModChloe;
+using osu.Game.Ailinea;
 
-namespace osu.Game.Rulesets.Osu.Tests
+namespace osu.Game.Rulesets.Taiko.Tests
 {
     [SetUpFixture]
-    public class LoadModChloe
+    public class LoadAilinea
     {
         [OneTimeSetUp]
         public void RunBeforeAnyTests()
