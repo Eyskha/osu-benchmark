@@ -4,6 +4,8 @@
 using System.IO;
 using Ailinea;
 using Ailinea.Inputs;
+using Chloe.ProjectMetrics;
+using System;
 
 namespace osu.Game.Ailinea
 {
@@ -34,20 +36,20 @@ namespace osu.Game.Ailinea
                 }
             );
 
-            //ModProjectMetrics.SetModParameters(
-            //    "Osu",
-            //    new string[] {
-            //        Path.Combine(path,"osu.Game.dll"),
-            //        Path.Combine(path,"osu.Game.Rulesets.Catch.dll"),
-            //        Path.Combine(path,"osu.Game.Rulesets.Mania.dll"),
-            //        Path.Combine(path,"osu.Game.Rulesets.Osu.dll"),
-            //        Path.Combine(path,"osu.Game.Rulesets.Taiko.dll"),
-            //        Path.Combine(path,"osu.Game.Tournament.dll"),
-            //    },
-            //    targetedNamespaces,
-            //    new Type[] { }
-            //);
-            //ModProjectMetrics.ComputeAndLogProjectMetrics();
+            ModProjectMetrics.SetModParameters(
+                "Osu",
+                new string[] {
+                    Path.Combine(path,"osu.Game.dll"),
+                    Path.Combine(path,"osu.Game.Rulesets.Catch.dll"),
+                    Path.Combine(path,"osu.Game.Rulesets.Mania.dll"),
+                    Path.Combine(path,"osu.Game.Rulesets.Osu.dll"),
+                    Path.Combine(path,"osu.Game.Rulesets.Taiko.dll"),
+                    Path.Combine(path,"osu.Game.Tournament.dll"),
+                },
+                targetedNamespaces,
+                new Type[] { }
+            );
+            ModProjectMetrics.ComputeAndLogProjectMetrics();
         }
     }
 }
